@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+{% include 'userheader.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Feedback</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        h1 {
+            text-align: center;
+            color: #333333;
+            margin-bottom: 30px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555555;
+            font-weight: bold;
+        }
+        .rating {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .rating input {
+            display: none;
+        }
+        .rating label {
+            cursor: pointer;
+            font-size: 30px;
+            color: #cccccc;
+            transition: color 0.3s ease;
+        }
+        .rating label:hover,
+        .rating input:checked ~ label {
+            color: #ffbb00;
+        }
+        input[type="text"],
+        input[type="email"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: border-color 0.3s ease;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus {
+            border-color: #ffbb00;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Customer Feedback Form</h1>
+    <form id="feedbackForm" action="submit_feedback.php" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <div class="quality-bg">
+            <label>Quality:</label>
+            <div class="rating">
+                <input type="radio" id="quality5" name="quality" value="5">
+                <label for="quality5">&#9733;</label>
+                <input type="radio" id="quality4" name="quality" value="4">
+                <label for="quality4">&#9733;</label>
+                <input type="radio" id="quality3" name="quality" value="3">
+                <label for="quality3">&#9733;</label>
+                <input type="radio" id="quality2" name="quality" value="2">
+                <label for="quality2">&#9733;</label>
+                <input type="radio" id="quality1" name="quality" value="1">
+                <label for="quality1">&#9733;</label>
+            </div>
+        </div>
+
+        <div class="service-bg">
+            <label>Service:</label>
+            <div class="rating">
+                <input type="radio" id="service5" name="service" value="5">
+                <label for="service5">&#9733;</label>
+                <input type="radio" id="service4" name="service" value="4">
+                <label for="service4">&#9733;</label>
+                <input type="radio" id="service3" name="service" value="3">
+                <label for="service3">&#9733;</label>
+                <input type="radio" id="service2" name="service" value="2">
+                <label for="service2">&#9733;</label>
+                <input type="radio" id="service1" name="service" value="1">
+                <label for="service1">&#9733;</label>
+            </div>
+        </div>
+
+        <div class="overall-bg">
+            <label>Overall Satisfaction:</label>
+            <div class="rating">
+                <input type="radio" id="overall5" name="overall" value="5">
+                <label for="overall5">&#9733;</label>
+                <input type="radio" id="overall4" name="overall" value="4">
+                <label for="overall4">&#9733;</label>
+                <input type="radio" id="overall3" name="overall" value="3">
+                <label for="overall3">&#9733;</label>
+                <input type="radio" id="overall2" name="overall" value="2">
+                <label for="overall2">&#9733;</label>
+                <input type="radio" id="overall1" name="overall" value="1">
+                <label for="overall1">&#9733;</label>
+            </div>
+        </div>
+
+        <input type="submit" value="Submit Feedback">
+    </form>
+</div>
+
+</body>
+</html>

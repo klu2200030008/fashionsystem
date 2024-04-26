@@ -1,0 +1,49 @@
+{% include 'header.html' %}
+
+{% load static %}
+
+{% block content %}
+{% if messages %}
+  {% for message in messages %}
+   {% if message.tags %}  <script>alert("{{ message }}")</script> {% endif %}
+  {% endfor %}
+{% endif %}
+
+
+<section class="event_part section_padding" style="background-image: url('{% static 'img/register.jpg' %}'); background-size: cover; background-position: center; height: 100vh; display: flex; justify-content: center; align-items: center;">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 bg-light">
+        <h1 align="center">Registration Form</h1>
+
+        <form method="post" action="{% url 'registration_view' %}">
+          {% csrf_token %}
+
+          <div class="form-group">
+            <label>Email address</label>
+            <input type="email" name="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" name="password" class="form-control" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" placeholder="Enter Name" name="name">
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" class="form-control" placeholder="Phone Number" pattern="[0-9]{10}" name="phone">
+          </div>
+          <div class="form-group" align="center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

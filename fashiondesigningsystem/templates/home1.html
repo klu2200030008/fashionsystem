@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+{% include 'userheader.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user home page</title>
+    <style>
+        .card {
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+        .card a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        section {
+            padding: 100px;
+        }
+       .card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust minmax values for desired card width and responsiveness */
+  gap: 7
+
+
+    </style>
+</head>
+
+<body>
+
+<section>
+  <div class="card-container">
+     <div class="card">
+             <a href="shop.html">
+            <img src="https://binfinite.in/cdn/shop/products/IMG_8524_1524x.jpg?v=1651583830" alt="Product Image">
+            <h2>SHOP</h2>
+        </a>
+    </div>
+    <div class="card">
+             <a href="collections.html">
+            <img src="https://binfinite.in/cdn/shop/products/IMG_8524_1524x.jpg?v=1651583830" alt="Product Image">
+            <h2>COLLECTIONS</h2>
+
+        </a>
+    </div>
+    <div class="card">
+             <a href="refrences.html">
+            <img src="https://binfinite.in/cdn/shop/products/IMG_8524_1524x.jpg?v=1651583830" alt="Product Image">
+            <h2>REFERENCES</h2>
+
+        </a>
+    </div>
+  </div>
+</section>
+
+
+</body>
+</html>
