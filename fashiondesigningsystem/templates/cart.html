@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% include 'userheader.html' %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+  <!-- Link Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Shopping Cart</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody id="cart-items">
+        <!-- Cart items will be dynamically added here -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- JavaScript to populate cart items -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Get cart items from localStorage
+      var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+      // Select cart items container
+      var cartItemsContainer = document.getElementById('cart-items');
+
+      // Populate cart items
+      cartItems.forEach(function(item) {
+        var row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${item.title}</td>
+          <td>${item.price}</td>
+        `;
+        cartItemsContainer.appendChild(row);
+      });
+    });
+  </script>
+</body>
+</html>

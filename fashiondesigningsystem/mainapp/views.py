@@ -48,6 +48,19 @@ def success_page(request):
     return render(request, 'success.html')
 
 
+def mytraditionalwear(request):
+    return render(request, "traditionalwear.html")
+def mymenswear(request):
+    return render(request, "menswear.html")
+
+def mysarees(request):
+    return render(request, "sarees.html")
+def mycart(request):
+    return render(request, "cart.html")
+def myladieswear(request):
+    return render(request, "ladieswear.html")
+def mykidswear(request):
+    return render(request, "kidswear.html")
 def registration_view(request):
     user_exists = False
     if request.method == 'POST':
@@ -85,23 +98,5 @@ def logout_view(request):
   logout(request)  # Logs out the user
   return redirect('home')
 
-def index(request):
+def myindex(request):
     return render(request, 'index.html')
-
-def submit_feedback(request):
-    if request.method == 'POST':
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        message = request.POST.get('message')
-        rating = request.POST.get('rating')
-
-        feedback = Feedback(name=name, email=email, message=message, rating=rating)
-        feedback.save()
-
-        messages.success(request, 'Feedback submitted successfully!')
-        return redirect('submit_feedback')
-
-    return render(request, 'feedback_form.html')
-
-
-

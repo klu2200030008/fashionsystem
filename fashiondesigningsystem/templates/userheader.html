@@ -40,20 +40,27 @@
                     <a class="nav-link" href="{% url 'home1' %}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'about1' %}">About</a>
+                    <a class="nav-link" href="{% url 'about1' %}">About us</a>
                 </li>
-                <li class="nav-item">
+
+             <li class="nav-item">
+    <form class="form-inline">
+        <input class="form-control form-control-sm mr-1" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light btn-sm" type="submit">Search</button>
+    </form>
+</li>
+
+                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'feedback1' %}">Feedback</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'contact1' %}">Contact</a>
                 </li>
-                <li class="nav-item">
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-                    </form>
+                 <li class="nav-item">
+                    <a class="nav-link" href="{% url 'cart' %}">Cart</a>
                 </li>
+
+
                  <li class="nav-item">
                     <a class="nav-link" href="{% url 'logout' %}">logout</a>
                 </li>

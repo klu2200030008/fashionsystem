@@ -4,13 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>user home page</title>
+    <title>User Home Page</title>
     <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-content: center; /* Center the content horizontally */
+            padding: 50px 20px; /* Adjusted padding for better spacing */
+        }
+
+        /* Card styles */
         .card {
-            width: 200px;
+            width: 300px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            margin: 10px;
             padding: 10px;
             text-align: center;
             background-color: #f9f9f9;
@@ -28,62 +51,41 @@
         }
 
         .card img {
-            max-width: 100%;
+            width: 100%;
             height: auto;
+            object-fit: cover;
             border-radius: 5px;
         }
-        body {
-            font-family: Arial, sans-serif;
+
+        .card h2 {
             margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
+            padding-top: 10px; /* Adjusted spacing for better alignment */
         }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-
-        section {
-            padding: 100px;
-        }
-       .card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust minmax values for desired card width and responsiveness */
-  gap: 7
-
-
     </style>
 </head>
-
 <body>
 
 <section>
-  <div class="card-container">
+    <div class="card">
+        <a href="kidswear.html">
+            <img src="https://cdn4.vectorstock.com/i/1000x1000/98/33/kids-clothes-seamless-pattern-background-vector-40609833.jpg" alt="Product Image">
+            <h2>KIDS WEAR</h2>
+        </a>
+    </div>
+    <div class="card">
+        <a href="menswear.html">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxH2VN_m3WudUauUxaber3nO9jTfaubWM7V2PnAevsyA&s" alt="Product Image">
+            <h2>MENS WEAR</h2>
+        </a>
+    </div>
      <div class="card">
-             <a href="shop.html">
-            <img src="https://binfinite.in/cdn/shop/products/IMG_8524_1524x.jpg?v=1651583830" alt="Product Image">
-            <h2>SHOP</h2>
+        <a href="ladieswear.html">
+            <img src="https://cdn4.vectorstock.com/i/1000x1000/71/38/background-with-various-womens-clothing-fashion-vector-19247138.jpg" alt="Product Image">
+            <h2>LADIES WEAR</h2>
         </a>
     </div>
-    <div class="card">
-             <a href="collections.html">
-            <img src="https://binfinite.in/cdn/shop/products/IMG_8524_1524x.jpg?v=1651583830" alt="Product Image">
-            <h2>COLLECTIONS</h2>
 
-        </a>
-    </div>
-    <div class="card">
-             <a href="refrences.html">
-            <img src="https://binfinite.in/cdn/shop/products/IMG_8524_1524x.jpg?v=1651583830" alt="Product Image">
-            <h2>REFERENCES</h2>
-
-        </a>
-    </div>
-  </div>
 </section>
-
 
 </body>
 </html>
